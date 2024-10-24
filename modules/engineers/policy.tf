@@ -52,7 +52,16 @@ resource "aws_iam_group_policy" "eng_group_policy" {
 				"ecr-public:*",
 				"freetier:*",
 				"payments:*",
-				"ssm:*"
+				"ssm:*",
+				"access-analyzer:*",
+				"organizations:*",
+				"ce:*",
+				"consolidatedbilling:*",
+				"cur:*",
+				"pricing:*",
+				"aws-portal:ViewBilling",
+				"aws-portal:ModifyBilling",
+				"billing:ListBillingViews"
 			],
 			"Resource": "*"
 		}
