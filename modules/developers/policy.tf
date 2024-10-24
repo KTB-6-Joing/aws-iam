@@ -167,7 +167,8 @@ resource "aws_iam_group_policy" "dev_group_policy" {
 				"ec2:UpdateSecurityGroupRuleDescriptionsEgress",
 				"ec2:UpdateSecurityGroupRuleDescriptionsIngress",
 				"ec2-instance-connect:*",
-				"cost-optimization-hub:*"
+				"cost-optimization-hub:*",
+				"ssm:*"
 			],
 			"Resource": "*"
 		}

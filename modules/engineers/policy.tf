@@ -51,7 +51,8 @@ resource "aws_iam_group_policy" "eng_group_policy" {
 				"ecr:*",
 				"ecr-public:*",
 				"freetier:*",
-				"payments:*"
+				"payments:*",
+				"ssm:*"
 			],
 			"Resource": "*"
 		}
