@@ -12,8 +12,8 @@ resource "aws_iam_user" "ecr_full" {
 }
 
 resource "aws_iam_user_policy" "ecr_full" {
-  name   = "ecr-full"
-  user   = aws_iam_user.ecr_full.name
+  name = "ecr-full"
+  user = aws_iam_user.ecr_full.name
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [

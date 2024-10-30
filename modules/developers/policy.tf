@@ -168,7 +168,22 @@ resource "aws_iam_group_policy" "dev_group_policy" {
 				"ec2:UpdateSecurityGroupRuleDescriptionsIngress",
 				"ec2-instance-connect:*",
 				"cost-optimization-hub:*",
-				"ssm:*"
+				"ssm:*",
+				"kms:ListAliases",
+				"kms:ListGrants",
+				"kms:ListKeyPolicies",
+				"kms:ListKeyRotations",
+				"kms:ListKeys",
+				"kms:ListResourceTags",
+				"kms:ListRetirableGrants",
+				"kms:DescribeCustomKeyStores",
+				"kms:DescribeKey",
+				"kms:GetKeyPolicy",
+				"kms:GetKeyRotationStatus",
+				"kms:GetParametersForImport",
+				"kms:GetPublicKey",
+				"kms:Decrypt",
+				"kms:ConnectCustomKeyStore"
 			],
 			"Resource": "*"
 		}

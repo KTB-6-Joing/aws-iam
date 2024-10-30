@@ -62,7 +62,8 @@ resource "aws_iam_group_policy" "eng_group_policy" {
 				"aws-portal:ViewBilling",
 				"aws-portal:ModifyBilling",
 				"billing:*",
-				"internetmonitor:*"
+				"internetmonitor:*",
+				"kms:*"
 			],
 			"Resource": "*"
 		}
