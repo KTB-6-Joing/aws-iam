@@ -5,13 +5,13 @@ locals {
   svc_user_path = "/users/svc/"
 }
 
-resource "aws_iam_user" "ecr-full" {
+resource "aws_iam_user" "ecr_full" {
   name = "ecr-full"
   path = local.svc_user_path
   tags = local.common_tags
 }
 
-resource "aws_iam_user_policy" "ecr-full" {
+resource "aws_iam_user_policy" "ecr_full" {
   name   = "ecr-full"
   user   = aws_iam_user.ecr_full.name
   policy = jsonencode({

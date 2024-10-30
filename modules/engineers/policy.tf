@@ -61,7 +61,8 @@ resource "aws_iam_group_policy" "eng_group_policy" {
 				"pricing:*",
 				"aws-portal:ViewBilling",
 				"aws-portal:ModifyBilling",
-				"billing:ListBillingViews"
+				"billing:*",
+				"internetmonitor:*"
 			],
 			"Resource": "*"
 		}
