@@ -3,8 +3,8 @@ resource "aws_iam_user" "admin" {
   path = "/"
 
   tags = {
-      role = var.admin
-    }
+    role = var.admin
+  }
 }
 
 resource "aws_iam_user_policy" "admin" {
@@ -13,13 +13,13 @@ resource "aws_iam_user_policy" "admin" {
 
   // AdministratorAccess
   policy = jsonencode({
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "*",
-            "Resource": "*"
-        }
+    "Version" : "2012-10-17",
+    "Statement" : [
+      {
+        "Effect" : "Allow",
+        "Action" : "*",
+        "Resource" : "*"
+      }
     ]
   })
 }

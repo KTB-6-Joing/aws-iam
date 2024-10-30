@@ -27,3 +27,7 @@ output "cloud-uno" {
 output "cloud-ethan" {
   value = module.eng.cloud-ethan
 }
+
+output "ecr-full" {
+  value = module.svc.ecr-full
+}

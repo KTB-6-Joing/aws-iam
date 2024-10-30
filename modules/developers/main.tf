@@ -21,7 +21,7 @@ resource "aws_iam_user" "front" {
     {
       part = var.front
     },
-    local.common_tags 
+    local.common_tags
   )
 }
 
@@ -33,7 +33,7 @@ resource "aws_iam_user" "back" {
     {
       part = var.back
     },
-    local.common_tags 
+    local.common_tags
   )
 }
 
@@ -45,7 +45,7 @@ resource "aws_iam_user" "gen-ai" {
     {
       part = var.gen-ai
     },
-    local.common_tags 
+    local.common_tags
   )
 }
 
@@ -57,26 +57,26 @@ resource "aws_iam_user" "rec-ai" {
     {
       part = var.rec-ai
     },
-    local.common_tags 
+    local.common_tags
   )
 }
 
 resource "aws_iam_user_group_membership" "frontend" {
-  user = aws_iam_user.front.name
+  user   = aws_iam_user.front.name
   groups = local.common_groups
 }
 
 resource "aws_iam_user_group_membership" "backend" {
-  user = aws_iam_user.back.name
+  user   = aws_iam_user.back.name
   groups = local.common_groups
 }
 
 resource "aws_iam_user_group_membership" "gen-ai" {
-  user = aws_iam_user.gen-ai.name
+  user   = aws_iam_user.gen-ai.name
   groups = local.common_groups
 }
 
 resource "aws_iam_user_group_membership" "rec-ai" {
-  user = aws_iam_user.rec-ai.name
+  user   = aws_iam_user.rec-ai.name
   groups = local.common_groups
 }

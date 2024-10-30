@@ -10,6 +10,10 @@ module "eng" {
   source = "./modules/engineers"
 }
 
+module "svc" {
+  source = "./modules/services"
+}
+
 resource "aws_iam_user" "terraform-cloud" {
   # Created in the Console
   # Access Keys Also Created in Console

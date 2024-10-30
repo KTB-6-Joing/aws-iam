@@ -1,4 +1,4 @@
-resource "aws_iam_group_policy" "eng_group_policy" { 
+resource "aws_iam_group_policy" "eng_group_policy" {
   name  = var.group_policy_name
   group = aws_iam_group.eng.id
 

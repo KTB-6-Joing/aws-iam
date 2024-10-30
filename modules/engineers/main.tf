@@ -27,11 +27,11 @@ resource "aws_iam_user" "cloud-ethan" {
 }
 
 resource "aws_iam_user_group_membership" "cloud-uno" {
-  user = aws_iam_user.cloud-uno.name
+  user   = aws_iam_user.cloud-uno.name
   groups = local.common_groups
 }
 
 resource "aws_iam_user_group_membership" "cloud-ethan" {
-  user = aws_iam_user.cloud-ethan.name
+  user   = aws_iam_user.cloud-ethan.name
   groups = local.common_groups
 }
