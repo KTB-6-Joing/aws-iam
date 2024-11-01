@@ -12,3 +12,7 @@
 - eng
   - cloud-uno @uno
   - cloud-ethan @ethan
+- svc
+  - ecr-full
+  - cluster-autoscaler - 별도 생성
+  - terraform-cloud - 별도 생성
