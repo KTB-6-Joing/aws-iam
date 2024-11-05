@@ -63,7 +63,8 @@ resource "aws_iam_group_policy" "eng_group_policy" {
 				"billing:*",
 				"internetmonitor:*",
 				"kms:*",
-				"s3:*"
+				"s3:*",
+				"acm:*"
 			],
 			"Resource": "*"
 		}
