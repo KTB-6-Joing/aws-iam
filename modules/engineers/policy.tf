@@ -64,7 +64,9 @@ resource "aws_iam_group_policy" "eng_group_policy" {
 				"internetmonitor:*",
 				"kms:*",
 				"s3:*",
-				"acm:*"
+				"acm:*",
+				"acm-pca:*",
+				"tag:*"
 			],
 			"Resource": "*"
 		}
