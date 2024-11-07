@@ -27,3 +27,27 @@ resource "aws_iam_user_policy" "ecr_full" {
     ]
   })
 }
+
+
+resource "aws_iam_user" "ssm_full" {
+  name = "ssm-full"
+  path = local.svc_user_path
+  tags = local.common_tags
+}
+
+resource "aws_iam_user_policy" "ssm_full" {
+  name = "ssm-full"
+  user = aws_iam_user.ssm_full.name
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = [
+          "ssm:*",
+        ]
+        Effect   = "Allow"
+        Resource = "*"
+      },
+    ]
+  })
+}

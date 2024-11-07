@@ -31,3 +31,7 @@ output "cloud-ethan" {
 output "ecr-full" {
   value = module.svc.ecr-full
 }
+
+output "ssm-full" {
+  value = module.svc.ssm-full
+}
