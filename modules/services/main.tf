@@ -20,6 +20,7 @@ resource "aws_iam_user_policy" "ecr_full" {
       {
         Action = [
           "ecr:*",
+          "eks:DescribeCluster"
         ]
         Effect   = "Allow"
         Resource = "*"
